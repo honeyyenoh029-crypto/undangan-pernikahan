@@ -1,0 +1,860 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Undangan Pernikahan Luxe - Bunga & Dimas</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            primary: '#9A7B38',
+                            light: '#D4AF37',
+                            dark: '#6e5520',
+                            paper: '#FCFAF5'
+                        },
+                        darkText: '#2C2A29',
+                        mutedText: '#5C5855'
+                    },
+                    fontFamily: {
+                        alex: ['"Alex Brush"', 'cursive'],
+                        cinzel: ['"Cinzel"', 'serif'],
+                        cormorant: ['"Cormorant Garamond"', 'serif'],
+                        greatvibes: ['"Great Vibes"', 'cursive'],
+                        montserrat: ['"Montserrat"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --gold-primary: #9A7B38;
+            --gold-light: #D4AF37;
+            --gold-dark: #6e5520;
+            --bg-paper: #FCFAF5;
+            --text-dark: #2C2A29;
+            --text-muted: #5C5855;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #121110;
+            background-image: radial-gradient(circle at 50% 50%, #21201d 0%, #0d0c0b 100%);
+            font-family: 'Cormorant Garamond', serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 10px;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .iphone-17-promax {
+            width: 420px;
+            height: 870px;
+            max-width: 100%;
+            max-height: 96vh;
+            background: linear-gradient(145deg, #3a3835, #1a1918, #2a2825);
+            border-radius: 54px;
+            padding: 12px;
+            position: relative;
+            box-shadow: 
+                0 0 0 1px #4a463d,
+                0 0 0 3px #1a1918,
+                0 25px 60px rgba(0, 0, 0, 0.95),
+                0 0 40px rgba(154, 123, 56, 0.25);
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+                background: var(--bg-paper);
+            }
+            .iphone-17-promax {
+                width: 100vw;
+                height: 100vh;
+                max-height: 100vh;
+                border-radius: 0;
+                padding: 0;
+                box-shadow: none;
+                background: var(--bg-paper);
+            }
+            .phone-screen {
+                border-radius: 0 !important;
+            }
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-paper);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.85) 0%, rgba(252, 250, 245, 0.45) 100%),
+                url('background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 44px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        .phone-screen::-webkit-scrollbar {
+            width: 3px;
+        }
+        .phone-screen::-webkit-scrollbar-thumb {
+            background: rgba(154, 123, 56, 0.3);
+            border-radius: 10px;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 30px;
+            background-color: #000000;
+            border-radius: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            pointer-events: none;
+        }
+
+        .camera-lens {
+            width: 10px;
+            height: 10px;
+            background: #0d0d14;
+            border-radius: 50%;
+            border: 1px solid #222233;
+        }
+
+        .status-bar {
+            position: absolute;
+            top: 20px;
+            left: 28px;
+            right: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #2C2A29;
+            z-index: 90;
+            pointer-events: none;
+        }
+
+        .home-indicator {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 4px;
+            background-color: rgba(44, 42, 41, 0.4);
+            border-radius: 10px;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .card-frame {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px solid var(--gold-primary);
+            outline: 1px solid var(--gold-light);
+            outline-offset: -5px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .card-frame-inner {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+            border: 1px dashed rgba(154, 123, 56, 0.35);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .photo-edge {
+            position: absolute;
+            width: auto;
+            z-index: 5;
+            pointer-events: none;
+            object-fit: contain;
+            filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.08));
+        }
+
+        .photo-edge-left {
+            left: -5px;
+            top: -5px;
+            width: 50%;
+            max-width: 200px;
+        }
+
+        .photo-edge-right {
+            right: -5px;
+            top: -5px;
+            width: 50%;
+            max-width: 200px;
+        }
+
+        .wayang-frame-container {
+            position: relative;
+            width: 160px;
+            height: 180px;
+            margin: 10px auto;
+            border-radius: 80px 80px 12px 12px;
+            padding: 5px;
+            background: linear-gradient(135deg, #D4AF37 0%, #9A7B38 50%, #6e5520 100%);
+            box-shadow: 
+                0 8px 20px rgba(154, 123, 56, 0.3),
+                inset 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: wayangFloat 4s ease-in-out infinite alternate;
+        }
+
+        .wayang-frame-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 75px 75px 8px 8px;
+            background-color: var(--bg-paper);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(154, 123, 56, 0.4);
+        }
+
+        .wayang-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        @keyframes wayangFloat {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-6px); }
+        }
+
+        .watermark-monogram {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Great Vibes', cursive;
+            font-size: 150px;
+            color: rgba(154, 123, 56, 0.05);
+            user-select: none;
+            z-index: 1;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .wax-seal {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at 30% 30%, #D4AF37, #8A6B22);
+            border-radius: 50%;
+            box-shadow: 
+                0 4px 15px rgba(0,0,0,0.3),
+                0 0 0 4px rgba(212, 175, 55, 0.25),
+                inset 0 0 6px rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #73571A;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .wax-seal:hover {
+            transform: scale(1.1);
+            box-shadow: 
+                0 6px 20px rgba(154, 123, 56, 0.5),
+                0 0 0 6px rgba(212, 175, 55, 0.35);
+        }
+
+        .wax-seal-inner {
+            width: 48px;
+            height: 48px;
+            border: 1px dashed rgba(255,255,255,0.7);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: bold;
+            color: #FFF;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+        }
+
+        .gold-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 240px;
+            margin: 8px auto;
+        }
+
+        .gold-divider::before,
+        .gold-divider::after {
+            content: '';
+            flex: 1;
+            height: 1.5px;
+            background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+        }
+
+        .gold-divider-icon {
+            margin: 0 10px;
+            color: var(--gold-primary);
+            font-size: 11px;
+        }
+
+        .anim-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes goldShimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .gold-shimmer-text {
+            background: linear-gradient(90deg, #6e5520 0%, #D4AF37 50%, #6e5520 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: goldShimmer 5s linear infinite;
+        }
+
+        #opening-cover {
+            transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+        }
+
+        #opening-cover.opened {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .music-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            z-index: 80;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(252, 250, 245, 0.88);
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            backdrop-filter: blur(4px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn.playing {
+            animation: spinMusic 10s linear infinite;
+            background: var(--gold-primary);
+            color: #FFF;
+        }
+
+        @keyframes spinMusic {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="wedding-audio" src="instrumenjawa.mp3" loop preload="auto"></audio>
+
+    <div class="iphone-17-promax">
+        
+        <div class="dynamic-island hidden sm:flex">
+            <div class="camera-lens"></div>
+            <div class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                <span class="text-[9px] text-zinc-400 font-sans tracking-widest uppercase">B & D</span>
+            </div>
+        </div>
+
+        <div class="status-bar hidden sm:flex">
+            <span id="current-time">09:41</span>
+            <div class="flex items-center gap-1.5 text-[10px]">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-full"></i>
+            </div>
+        </div>
+
+        <div class="phone-screen" id="scroll-container">
+
+            <img src="bunga-pinggir-kiri.png" class="photo-edge photo-edge-left" alt="Hiasan Bunga Kiri Atas" onerror="this.style.display='none'">
+            <img src="bunga-pinggir-kanan.png" class="photo-edge photo-edge-right" alt="Hiasan Bunga Kanan Atas" onerror="this.style.display='none'">
+
+            <div class="card-frame"></div>
+            <div class="card-frame-inner"></div>
+
+            <div class="watermark-monogram">B & D</div>
+
+            <button id="music-toggle" class="music-btn" title="Musik Latar">
+                <i class="fa-solid fa-music text-xs"></i>
+            </button>
+
+
+            <div id="opening-cover" class="absolute inset-0 z-50 bg-[#FCFAF5] flex flex-col justify-between items-center px-6 py-10 text-center overflow-hidden"
+                 style="background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.88) 0%, rgba(252, 250, 245, 0.5) 100%), url('background.jpeg'); background-size: cover; background-position: center;">
+                
+                <div class="card-frame"></div>
+                <div class="card-frame-inner"></div>
+
+                <div class="mt-8 space-y-1 relative z-20">
+                    <p class="font-montserrat text-[10px] tracking-[4px] text-[#6e5520] font-bold uppercase">
+                        THE WEDDING INVITATION
+                    </p>
+                    <div class="w-12 h-[1px] bg-[#9A7B38] mx-auto my-1.5 opacity-60"></div>
+                </div>
+
+                <div class="my-auto relative z-20 w-full flex flex-col items-center">
+                    
+                    <div class="wayang-frame-container">
+                        <div class="wayang-frame-inner">
+                            <img src="wayang.jpeg" class="wayang-image" alt="Wayang Jawa Pernikahan" onerror="this.src='https://placehold.co/200x260/FCFAF5/9A7B38?text=Wayang'">
+                        </div>
+                    </div>
+
+                    <div class="space-y-0.5 mt-3">
+                        <h2 class="font-cinzel text-xl font-bold tracking-[5px] text-[#2C2A29]">B U N G A</h2>
+                        <span class="font-alex text-2xl text-[#9A7B38] block leading-none">&</span>
+                        <h2 class="font-cinzel text-xl font-bold tracking-[5px] text-[#2C2A29]">D I M A S</h2>
+                    </div>
+
+                    <div class="mt-3">
+                        <p class="font-cormorant italic text-xs text-[#5C5855]">
+                            Kepada Yth. Bapak/Ibu/Saudara/i
+                        </p>
+                        <p id="guest-name-display" class="font-montserrat text-xs font-semibold text-[#2C2A29] uppercase tracking-wider mt-0.5">
+                            Tamu Undangan
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-2 relative z-30 flex flex-col items-center space-y-2">
+                    <div id="btn-open-cover" class="wax-seal">
+                        <div class="wax-seal-inner">
+                            <i class="fa-solid fa-envelope-open text-xs mb-0.5"></i>
+                            <span class="text-[8px] font-montserrat tracking-widest uppercase">BUKA</span>
+                        </div>
+                    </div>
+                    <p class="font-montserrat text-[9px] tracking-[2px] text-[#6e5520] uppercase font-bold">Klik Stempel Untuk Membuka</p>
+                </div>
+
+            </div>
+
+
+            <div class="relative min-h-full px-7 py-12 flex flex-col justify-between items-center text-center z-10">
+                
+                <section class="w-full mt-6 mb-4 space-y-1 relative z-20 anim-reveal">
+                    <div class="font-montserrat text-[11px] tracking-[4px] text-[#6e5520] font-bold uppercase">
+                        THE WEDDING INVITATION
+                    </div>
+                    
+                    <h1 class="font-alex text-5xl md:text-6xl text-[#9A7B38] gold-shimmer-text py-1 leading-tight">
+                        Save the Date
+                    </h1>
+                    
+                    <div class="font-cormorant italic text-base text-[#5C5855] tracking-widest">
+                        for the marriage of
+                    </div>
+                </section>
+
+                <section class="w-full my-3 relative z-20 anim-reveal">
+                    <div class="gold-divider">
+                        <span class="gold-divider-icon">✦</span>
+                    </div>
+
+                    <div class="py-2 space-y-1">
+                        <div class="font-cinzel text-2xl font-semibold tracking-[6px] text-[#2C2A29] uppercase">
+                            B U N G A
+                        </div>
+                        <p class="font-montserrat text-[10px] text-[#5C5855] italic">Putri dari Bapak Wimpy & Ibu Yuni</p>
+                        
+                        <div class="font-alex text-3xl text-[#9A7B38] font-normal my-1">
+                            &
+                        </div>
+                        
+                        <div class="font-cinzel text-2xl font-semibold tracking-[6px] text-[#2C2A29] uppercase">
+                            D I M A S
+                        </div>
+                        <p class="font-montserrat text-[10px] text-[#5C5855] italic">Putra dari Bapak Christo & Ibu Yeni</p>
+                    </div>
+
+                    <div class="gold-divider">
+                        <span class="gold-divider-icon">✦</span>
+                    </div>
+                </section>
+
+                <section class="w-full my-4 relative z-20 anim-reveal">
+                    <div class="flex items-center justify-center gap-4 my-2">
+                        <div class="font-cinzel text-2xl font-bold text-[#6e5520] tracking-[3px]">24</div>
+                        <div class="w-[1px] h-8 bg-[#9A7B38] opacity-50"></div>
+                        <div class="font-cinzel text-xl font-bold text-[#6e5520] tracking-[3px]">JUNI</div>
+                        <div class="w-[1px] h-8 bg-[#9A7B38] opacity-50"></div>
+                        <div class="font-cinzel text-2xl font-bold text-[#6e5520] tracking-[3px]">2025</div>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-2 max-w-[280px] mx-auto mt-4 bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-[#9A7B38]/30 shadow-sm">
+                        <div class="text-center">
+                            <span id="cd-days" class="font-cinzel text-lg font-bold text-[#6e5520] block">00</span>
+                            <span class="font-montserrat text-[8px] uppercase tracking-wider text-[#5C5855]">Hari</span>
+                        </div>
+                        <div class="text-center">
+                            <span id="cd-hours" class="font-cinzel text-lg font-bold text-[#6e5520] block">00</span>
+                            <span class="font-montserrat text-[8px] uppercase tracking-wider text-[#5C5855]">Jam</span>
+                        </div>
+                        <div class="text-center">
+                            <span id="cd-mins" class="font-cinzel text-lg font-bold text-[#6e5520] block">00</span>
+                            <span class="font-montserrat text-[8px] uppercase tracking-wider text-[#5C5855]">Menit</span>
+                        </div>
+                        <div class="text-center">
+                            <span id="cd-secs" class="font-cinzel text-lg font-bold text-[#6e5520] block">00</span>
+                            <span class="font-montserrat text-[8px] uppercase tracking-wider text-[#5C5855]">Detik</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="w-full my-3 relative z-20 anim-reveal">
+                    <div class="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-[#9A7B38]/30 space-y-2 shadow-sm">
+                        <div class="font-montserrat text-xs font-bold tracking-[2px] uppercase text-[#2C2A29]">
+                            THE GRAND BALLROOM<br>HOTEL MAJAPAHIT
+                        </div>
+
+                        <div class="font-cormorant italic text-sm text-[#5C5855] leading-relaxed">
+                            Pukul 11.00 WIB - Selesai<br>Jl. Tunjungan No. 65, Genteng, Surabaya
+                        </div>
+
+                        <div class="pt-2 flex flex-col gap-2 justify-center">
+                            <a href="https://maps.google.com/?q=Hotel+Majapahit+Surabaya+Jl.+Tunjungan+No.+65" target="_blank" rel="noopener noreferrer" class="w-full py-2 bg-[#9A7B38] hover:bg-[#6e5520] text-white rounded-full font-montserrat text-[10px] font-semibold tracking-widest uppercase transition-all shadow-sm flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-location-dot"></i> Petunjuk Lokasi
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="w-full my-3 relative z-20 anim-reveal">
+                    <div class="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-[#9A7B38]/30 space-y-3 shadow-sm text-left">
+                        <div class="text-center space-y-1">
+                            <h3 class="font-cinzel text-sm font-bold text-[#2C2A29] tracking-wider">KONFIRMASI KEHADIRAN</h3>
+                            <div class="w-8 h-[1px] bg-[#9A7B38] mx-auto"></div>
+                        </div>
+
+                        <form id="rsvp-form" class="space-y-2.5 pt-1">
+                            <div>
+                                <label class="block font-montserrat text-[9px] tracking-widest uppercase text-[#5C5855] mb-1">Nama Anda</label>
+                                <input type="text" id="rsvp-name" required placeholder="Nama Lengkap" class="w-full px-3 py-1.5 text-xs bg-white border border-[#9A7B38]/40 rounded-lg focus:outline-none focus:border-[#9A7B38] font-montserrat">
+                            </div>
+
+                            <div>
+                                <label class="block font-montserrat text-[9px] tracking-widest uppercase text-[#5C5855] mb-1">Kehadiran</label>
+                                <select id="rsvp-status" required class="w-full px-3 py-1.5 text-xs bg-white border border-[#9A7B38]/40 rounded-lg focus:outline-none focus:border-[#9A7B38] font-montserrat">
+                                    <option value="Hadir">Saya Akan Hadir</option>
+                                    <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full py-2 bg-[#9A7B38] hover:bg-[#6e5520] text-white rounded-lg font-montserrat text-[10px] font-semibold tracking-widest uppercase transition-all shadow-sm">
+                                Kirim Konfirmasi
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="w-full my-3 relative z-20 anim-reveal">
+                    <button id="btn-open-gift" class="w-full py-2.5 bg-white/80 border border-[#9A7B38]/40 hover:border-[#9A7B38] text-[#6e5520] rounded-2xl font-montserrat text-[10px] font-semibold tracking-widest uppercase transition-all shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-gift text-xs"></i> HADIAH DIGITAL
+                    </button>
+                </section>
+
+                <footer class="w-full pt-4 pb-12 relative z-20 text-center space-y-2 anim-reveal">
+                    <p class="font-cormorant italic text-xs text-[#5C5855]">
+                        Merupakan suatu kehormatan & kebahagiaan bagi kami<br>apabila Bapak/Ibu/Saudara/i berkenan hadir.
+                    </p>
+                    <p class="font-montserrat text-[9px] tracking-[3px] text-[#6e5520] uppercase font-bold pt-1">
+                        Bunga & Dimas
+                    </p>
+                </footer>
+
+            </div>
+
+            <div class="wax-seal !absolute bottom-7 right-7 !w-11 !h-11 z-20" title="Bunga & Dimas">
+                <div class="wax-seal-inner !w-8 !h-8 !text-[8px]">
+                    <span>B & D</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="home-indicator hidden sm:block"></div>
+    </div>
+
+    <div id="gift-modal" class="modal-overlay">
+        <div class="bg-[#FCFAF5] p-6 rounded-3xl border border-[#9A7B38] max-w-[320px] w-full text-center space-y-4 shadow-2xl relative">
+            <button id="btn-close-gift" class="absolute top-3 right-3 text-[#5C5855] hover:text-[#2C2A29] p-1">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="space-y-1 pt-2">
+                <i class="fa-solid fa-gift text-2xl text-[#9A7B38]"></i>
+                <h4 class="font-cinzel text-base font-bold text-[#2C2A29]">HADIAH DIGITAL</h4>
+                <p class="font-cormorant italic text-xs text-[#5C5855]">Doa restu Anda merupakan hadiah terindah bagi kami.</p>
+            </div>
+
+            <div class="bg-white p-3 rounded-xl border border-[#9A7B38]/30 space-y-2 text-left font-montserrat">
+                <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold text-[#6e5520] uppercase">BANK BCA</span>
+                    <span class="text-[9px] text-gray-400">a.n Bunga</span>
+                </div>
+                <div class="flex justify-between items-center bg-[#FCFAF5] p-2 rounded border border-gray-100">
+                    <span class="text-xs font-mono font-bold text-[#2C2A29]">1234567890</span>
+                    <button class="btn-copy text-[9px] bg-[#9A7B38] text-white px-2 py-1 rounded hover:bg-[#6e5520]" data-copy="1234567890">
+                        Salin
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-3 rounded-xl border border-[#9A7B38]/30 space-y-2 text-left font-montserrat">
+                <div class="flex justify-between items-center">
+                    <span class="text-[10px] font-bold text-[#6e5520] uppercase">BANK MANDIRI</span>
+                    <span class="text-[9px] text-gray-400">a.n Dimas</span>
+                </div>
+                <div class="flex justify-between items-center bg-[#FCFAF5] p-2 rounded border border-gray-100">
+                    <span class="text-xs font-mono font-bold text-[#2C2A29]">0987654321</span>
+                    <button class="btn-copy text-[9px] bg-[#9A7B38] text-white px-2 py-1 rounded hover:bg-[#6e5520]" data-copy="0987654321">
+                        Salin
+                    </button>
+                </div>
+            </div>
+
+            <div id="copy-toast" class="text-[10px] font-montserrat text-emerald-600 hidden font-semibold">
+                ✓ Nomor rekening berhasil disalin!
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openingCover = document.getElementById('opening-cover');
+            const btnOpenCover = document.getElementById('btn-open-cover');
+            const musicToggle = document.getElementById('music-toggle');
+            const scrollContainer = document.getElementById('scroll-container');
+            const giftModal = document.getElementById('gift-modal');
+            const btnOpenGift = document.getElementById('btn-open-gift');
+            const btnCloseGift = document.getElementById('btn-close-gift');
+            const audioEl = document.getElementById('wedding-audio');
+            
+            let isMusicPlaying = false;
+
+            function updateTime() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const timeStr = `${hours}:${minutes}`;
+                const timeEl = document.getElementById('current-time');
+                if (timeEl) timeEl.innerText = timeStr;
+            }
+            updateTime();
+            setInterval(updateTime, 10000);
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('to') || urlParams.get('p') || urlParams.get('guest');
+            if (guestName) {
+                const guestEl = document.getElementById('guest-name-display');
+                if (guestEl) guestEl.innerText = guestName;
+            }
+
+            function playMusic() {
+                if (!audioEl) return;
+                audioEl.play().then(() => {
+                    isMusicPlaying = true;
+                    musicToggle.classList.add('playing');
+                }).catch(err => {
+                    console.log("Autoplay dicegah oleh browser atau file audio tidak ditemukan:", err);
+                });
+            }
+
+            function stopMusic() {
+                if (!audioEl) return;
+                audioEl.pause();
+                isMusicPlaying = false;
+                musicToggle.classList.remove('playing');
+            }
+
+            musicToggle.addEventListener('click', () => {
+                if (isMusicPlaying) {
+                    stopMusic();
+                } else {
+                    playMusic();
+                }
+            });
+
+            btnOpenCover.addEventListener('click', () => {
+                openingCover.classList.add('opened');
+                playMusic();
+
+                setTimeout(() => {
+                    initScrollReveal();
+                }, 300);
+            });
+
+            const targetDate = new Date('June 24, 2025 11:00:00').getTime();
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const diff = targetDate - now;
+
+                if (diff <= 0) {
+                    document.getElementById('cd-days').innerText = '00';
+                    document.getElementById('cd-hours').innerText = '00';
+                    document.getElementById('cd-mins').innerText = '00';
+                    document.getElementById('cd-secs').innerText = '00';
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('cd-secs').innerText = String(seconds).padStart(2, '0');
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            function initScrollReveal() {
+                const reveals = document.querySelectorAll('.anim-reveal');
+                
+                const checkReveal = () => {
+                    const triggerBottom = scrollContainer.clientHeight * 0.9;
+                    reveals.forEach(el => {
+                        const top = el.getBoundingClientRect().top;
+                        if (top < triggerBottom) {
+                            el.classList.add('active');
+                        }
+                    });
+                };
+
+                scrollContainer.addEventListener('scroll', checkReveal);
+                checkReveal();
+            }
+
+            btnOpenGift.addEventListener('click', () => {
+                giftModal.classList.add('active');
+            });
+
+            btnCloseGift.addEventListener('click', () => {
+                giftModal.classList.remove('active');
+            });
+
+            giftModal.addEventListener('click', (e) => {
+                if (e.target === giftModal) {
+                    giftModal.classList.remove('active');
+                }
+            });
+
+            const copyBtns = document.querySelectorAll('.btn-copy');
+            const copyToast = document.getElementById('copy-toast');
+
+            copyBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const textToCopy = btn.getAttribute('data-copy');
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        copyToast.classList.remove('hidden');
+                        setTimeout(() => {
+                            copyToast.classList.add('hidden');
+                        }, 2500);
+                    });
+                });
+            });
+
+            const rsvpForm = document.getElementById('rsvp-form');
+            rsvpForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('rsvp-name').value;
+                const status = document.getElementById('rsvp-status').value;
+                alert(`Terima kasih ${name}, konfirmasi Anda (${status}) telah tersimpan.`);
+                rsvpForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
